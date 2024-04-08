@@ -1,0 +1,35 @@
+{
+  "BigQuery Schema":[{
+    "name":"MatchId",
+    "type":"Integer"
+  },
+  {
+    "name":"SeriesId",
+    "type":"Integer"
+  },
+  {
+    "name":"SeriesName",
+    "type":"String"
+  },
+  {
+    "name":"MatchFormat",
+    "type":"String"
+  },
+  {
+    "name":"StartDate",
+    "type":"String"
+  },
+  {
+    "name":"EndDate",
+    "type":"String"
+  },
+  {
+    "name":"State",
+    "type":"String"
+  },
+  {
+    "name":"Status",
+    "type":"String"
+  }
+  ]
+}
