@@ -37,14 +37,17 @@ with open('test.json','w') as file:
   json.dump(d,file)
   print('file create successful')
 
-bucket_name = "sdk_push"
-source_file_path = "/home/javvajisuryateja0305/test.json"
-destination_blob_name = "initial.json"  # Optional, keeps the filename
+bucket_name = "sdk_push" # GCS Bucket in wich data is loaded
+destination_blob_name = "Match.json"  # Optional, keeps the filename
 
-client = storage.Client()
-bucket = client.get_bucket(bucket_name)
-blob = bucket.blob(destination_blob_name)
-blob.upload_from_filename(source_file_path)
+if:
+   client = storage.Client()
+   bucket = client.get_bucket(bucket_name)
+   blob = bucket.blob(destination_blob_name)
+   blob.upload_from_filename('test.json')
 
-#upload_file(bucket_name, source_file_path, destination_blob_name)
-print('file transfer successfull')
+
+   #upload_file(bucket_name, source_file_path, destination_blob_name)
+   print('file transfer successfull')
+else:
+     print('File Transfer failed')
